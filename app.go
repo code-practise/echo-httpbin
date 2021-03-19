@@ -11,6 +11,8 @@ func main() {
 	e.GET("/", func(c echo.Context) error {
 		return c.String(http.StatusOK, "Echo httpbin!")
 	})
+	e.GET("/favicon.ico", Favicon)
+	e.GET("/favicon", Favicon)
 	e.GET("/get", Methods)
 	e.POST("/post", Methods)
 	e.PATCH("/patch", Methods)

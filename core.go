@@ -7,6 +7,10 @@ import (
 	"github.com/labstack/echo/v4"
 )
 
+func Favicon(c echo.Context) error {
+	return c.File("static/favicon.ico")
+}
+
 func Methods(c echo.Context) error {
 	respMap := map[string]interface{}{}
 	respMap["args"] = c.QueryParams()
